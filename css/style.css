@@ -1,15 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
 html {
     box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 18px;
 }
 *, *::before, *::after {
     box-sizing: inherit;
     margin: 0;
     padding: 0;
 }
-.attribution { 
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+}
+p {
+    display: inline;
+}
+ul {
+    border-top: 0.5px solid var(--dark-gray);
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    list-style: none;
+    padding: 1rem 2rem;
+}
+li {
+    text-align: center;
+}
+.background {
+    background-color: var(--dark-cyan);
+    background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+    background-position: right 48vw bottom 40vh, left 45vw top 44vh;
+    background-repeat: no-repeat;
+}
+.page-wrapper {
+    align-items: center;
+    display: grid;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    min-height: 100vh;
+}
+.profile-card {
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    overflow: hidden;
+    width: 100%;
+}
+.header__img {
+    width: 100%
+}
+.profile__wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: -3.5rem;
+}
+.profile__img {
+    border: 4px solid white;
+    border-radius: 50%;
+}
+.profile__personal-details {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.personal-details__main {
+    margin-bottom: 6px;
+}
+.personal-details__name {
+    color: var(--very-dark-desaturated-blue);
+    font-weight: 600;
+}
+.personal-details__age {
+    color: var(--dark-grayish-blue);
+}
+.personal-details__location {
+    color: var(--dark-grayish-blue);
+    font-size: .85rem;
+}
+.stat {
+    color: var(--very-dark-desaturated-blue);
+    font-weight: 600;
+}
+.stat__subheading {
+    color: var(--dark-gray);
+    display: block;
+    font-size: xx-small;
+    letter-spacing: 2px;
+}
+.attribution {
+    color: white; 
     font-size: 11px;
+    padding: 10px;
     text-align: center; 
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
-}
+ }
